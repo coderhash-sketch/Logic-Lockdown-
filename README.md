@@ -1,20 +1,45 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🧠 Logic Lockdown
 
-# Run and deploy your AI Studio app
+> A Competitive Digital Logic Escape Experience  
+> **Where reasoning is your only key.**
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/de760326-89ec-4d98-8fc6-1d44737f0062
+## 🚀 Overview
 
-## Run Locally
+**Logic Lockdown** is a high-intensity, web-based logic escape game designed for university competitions, tech fests, and puzzle enthusiasts.
 
-**Prerequisites:**  Node.js
+Participants must solve progressively difficult logic challenges to unlock digital vaults before time runs out.
+
+No trivia.  
+No memorization.  
+No guesswork.  
+
+Only pure reasoning.
+
+---
+
+## 🎯 Objective
+
+Crack all logical locks within the time limit and achieve the highest possible score based on:
+
+- ✅ Levels completed  
+- ⏱ Time taken  
+- 🎯 Attempts used  
+
+---
+
+## 🧩 Game Structure
+
+The game consists of multiple sequential levels:
+
+1. **Warm-Up Lock** – Basic pattern recognition  
+2. **Elimination Lock** – Logical constraints  
+3. **Pattern Twist Lock** – Non-linear reasoning  
+4. **Deduction Lock** – Analytical thinking  
+5. **INFINITUS Final Lock** – Elite hybrid challenge  
+
+Each level unlocks only after the previous one is solved.
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+
