@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Lockdown: INFINITUS 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-cyan: #00f2ff;
+            --neon-pink: #ff00ff;
+            --neon-purple: #9d00ff;
+            --neon-gold: #ffcc33;
+            --neon-lime: #00ff41;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'JetBrains+Mono', monospace;
+            margin: 0;
+            min-height: 100vh;
+            width: 100vw;
+            overflow-y: auto;
+            overflow-x: hidden;
+            transition: background-color 0.8s ease;
+        }
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        .font-syncopate { font-family: 'Syncopate', sans-serif; }
+        .font-charter { font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; }
+        
+        @keyframes rainbow-text {
+            0% { color: #ff00ff; text-shadow: 0 0 10px rgba(255, 0, 255, 0.5); }
+            33% { color: #00ffff; text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
+            66% { color: #00ff00; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); }
+            100% { color: #ff00ff; text-shadow: 0 0 10px rgba(255, 0, 255, 0.5); }
+        }
+        .animate-rainbow {
+            animation: rainbow-text 5s linear infinite;
+        }
+
+        .rainbow-border-box {
+            position: relative;
+            background: #000;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            border-radius: 2rem;
+        }
+        .rainbow-border-box::after {
+            content: '';
+            position: absolute;
+            top: -2px; bottom: -2px; left: -2px; right: -2px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #00ff00, #ffff00, #ff00ff);
+            z-index: -1;
+            border-radius: 2rem;
+            animation: border-spin 4s linear infinite;
+            background-size: 400% 400%;
+        }
+        @keyframes border-spin {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .interactive-entity {
+            position: absolute;
+            pointer-events: none;
+            user-select: none;
+            z-index: 1;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 3px;
+        }
+
+        /* LIGHT THEME: Very light background, Dark text, No neon */
+        .theme-light {
+            background-color: #fcfcfc !important;
+            color: #1a1a1a !important;
+        }
+        .theme-light header {
+            background-color: rgba(252, 252, 252, 0.9) !important;
+            border-bottom: 1px solid #e5e7eb !important;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.02) !important;
+        }
+        .theme-light .card-main {
+            background-color: #ffffff !important;
+            border: 1px solid #eeeeee !important;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.05) !important;
+        }
+        .theme-light .text-highlight {
+            color: #000000 !important;
+        }
+        .theme-light .bg-subtle {
+            background-color: #f7f7f7 !important;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
